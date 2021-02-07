@@ -11,7 +11,6 @@
 #include "Data.h"
 
 #include <iostream>
-#include <vector>
 #include <cassert>
 #include <fstream>
 

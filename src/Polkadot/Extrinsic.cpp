@@ -146,7 +146,7 @@ Data Extrinsic::encodePayload() const {
 Data Extrinsic::encodeSignature(const PublicKey& signer, const Data& signature) const {
     Data data;
     // version header
-    append(data, Data{extrinsicFormat | signedBit});
+    append(data, Data(extrinsicFormat | signedBit));
     // signer public key
     append(data, encodeAddress(signer));
     // signature type

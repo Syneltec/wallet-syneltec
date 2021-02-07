@@ -14,6 +14,11 @@
 #endif
 #endif
 
+#ifdef __GNUC__
+#define __has_feature(x) false
+#endif
+
+
 // Marker for exported classes
 #define TW_EXPORT_CLASS
 

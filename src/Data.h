@@ -11,6 +11,16 @@
 #include <string>
 #include <array>
 
+#ifdef __GNUC__
+  #ifndef _Nonnull
+     #define _Nonnull
+  #endif
+  #include <limits.h>
+  #include <cstring>
+#else
+  #include <string>
+#endif
+
 namespace TW {
 
 using byte = std::uint8_t;
