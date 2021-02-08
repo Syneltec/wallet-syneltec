@@ -37,7 +37,7 @@ public class Prog
 
     void onCreate() 
     {
-        System.loadLibrary("TrustWalletJni");
+        System.loadLibrary("TrustWalletCore");
 
         // 'Import' a wallet
         HDWallet myWallet = new HDWallet(seedPhrase, passphrase);
