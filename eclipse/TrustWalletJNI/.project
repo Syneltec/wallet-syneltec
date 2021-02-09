@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>TrustWalletJav</name>
+	<name>TrustWalletJNI</name>
 	<comment></comment>
 	<projects>
 		<project>TrustWalletCore</project>
@@ -19,7 +19,13 @@
 		<link>
 			<name>src/wallet</name>
 			<type>2</type>
-			<locationURI>PARENT-2-PROJECT_LOC/jni/java/wallet</locationURI>
+			<locationURI>copy_PARENT/jni/java/wallet</locationURI>
 		</link>
 	</linkedResources>
+	<variableList>
+		<variable>
+			<name>copy_PARENT</name>
+			<value>$%7BPARENT-2-ECLIPSE_HOME%7D/CCL_GIT/wallet-syneltec</value>
+		</variable>
+	</variableList>
 </projectDescription>
