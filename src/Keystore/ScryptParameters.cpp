@@ -16,7 +16,9 @@ ScryptParameters::ScryptParameters() : salt(32) {
     random_buffer(salt.data(), salt.size());
 }
 
+#ifndef __GNUC__
 #pragma GCC diagnostic ignored "-Wtautological-constant-out-of-range-compare"
+#endif
 
 std::optional<ScryptValidationError> ScryptParameters::validate() const {
     if (desiredKeyLength > ((1ULL << 32) - 1) * 32) { // depending on size_t size on platform, may be always false 

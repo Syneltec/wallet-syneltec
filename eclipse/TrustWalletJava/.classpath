@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry excluding="wallet/core/Coins.java" kind="src" path="src"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/TrustWalletJav"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/TrustWalletJNI"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/home/charly/CCL_ECLIPSE/javalibs/protobuf-java-3.14.0.jar"/>
-	<classpathentry kind="lib" path="/home/charly/CCL_GIT/wallet-syneltec/eclipse/TrustWalletJav/bin/wallet">
-		<attributes>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="TrustWalletCore/Debug"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="lib" path="/TrustWalletJNI/bin"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

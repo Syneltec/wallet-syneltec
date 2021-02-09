@@ -11,7 +11,9 @@
 
 namespace TW::Algorand {
 
+#ifndef __GNUC__
 #pragma GCC diagnostic ignored "-Wtautological-constant-out-of-range-compare"
+#endif
 
 static inline void encodeString(std::string string, Data& data) {
     // encode string header

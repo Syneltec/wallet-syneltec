@@ -22,7 +22,6 @@ public class Prog
     
     void init ()
     {
-        System.loadLibrary("TrustWalletCore");
     }
     
     void showLog(String msg)

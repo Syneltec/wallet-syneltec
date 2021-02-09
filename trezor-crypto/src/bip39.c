@@ -204,7 +204,7 @@ void mnemonic_to_seed(const char *mnemonic, const char *passphrase, uint8_t seed
 {
 	char *normalized = normalize_mnemonic(mnemonic);
 	int normalizedlen = strlen(normalized);
-	int passphraselen = strnlen(passphrase, 256);
+	int passphraselen = strlen(passphrase);
 	uint8_t salt[8 + 256];
 	memcpy(salt, "mnemonic", 8);
 	memcpy(salt + 8, passphrase, passphraselen);

@@ -6,8 +6,13 @@
 
 #include <TrustWalletCore/TWHDVersion.h>
 
+#ifdef __GNUC__
+#pragma GCC diagnostic push
+#pragma GCC diagnostic error "-Wswitch"
+#else
 #pragma clang diagnostic push
 #pragma clang diagnostic fatal "-Wswitch"
+#endif
 
 bool TWHDVersionIsPublic(enum TWHDVersion version) {
     switch (version) {
@@ -43,4 +48,8 @@ bool TWHDVersionIsPrivate(enum TWHDVersion version) {
     }
 }
 
+#ifdef __GNUC__
+#pragma GCC diagnostic pop
+#else
 #pragma clang diagnostic pop
+#endif

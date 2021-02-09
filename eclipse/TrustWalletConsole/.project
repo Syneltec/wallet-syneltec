@@ -3,7 +3,6 @@
 	<name>TrustWalletConsole</name>
 	<comment></comment>
 	<projects>
-		<project>TrustWalletCore</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

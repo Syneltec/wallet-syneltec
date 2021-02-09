@@ -24,8 +24,8 @@
 						<toolChain id="cdt.managedbuild.toolchain.gnu.base.1044652443" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.base">
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.GNU_ELF" id="cdt.managedbuild.target.gnu.platform.base.978181571" name="Debug Platform" osList="linux,hpux,aix,qnx" superClass="cdt.managedbuild.target.gnu.platform.base"/>
 							<builder buildPath="${workspace_loc:/TrustWalletCrypto}/Debug" id="cdt.managedbuild.target.gnu.builder.base.1887092336" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" stopOnErr="false" superClass="cdt.managedbuild.target.gnu.builder.base"/>
-							<tool command="ccache ar" id="cdt.managedbuild.tool.gnu.archiver.base.848209575" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base"/>
-							<tool command="ccache g++ -c" id="cdt.managedbuild.tool.gnu.cpp.compiler.base.1242697653" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.base">
+							<tool command="ar" id="cdt.managedbuild.tool.gnu.archiver.base.848209575" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base"/>
+							<tool command="g++ -c" id="cdt.managedbuild.tool.gnu.cpp.compiler.base.1242697653" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.base">
 								<option id="gnu.cpp.compiler.option.optimization.level.709958398" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
 								<option defaultValue="gnu.cpp.compiler.debugging.level.max" id="gnu.cpp.compiler.option.debugging.level.700121604" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.dialect.std.1293450643" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.c++17" valueType="enumerated"/>
@@ -40,7 +40,7 @@
 								<option id="gnu.cpp.compiler.option.debugging.codecov.2051069284" name="Generate gcov information (-ftest-coverage -fprofile-arcs)" superClass="gnu.cpp.compiler.option.debugging.codecov" useByScannerDiscovery="false" value="false" valueType="boolean"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1078248474" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
-							<tool command="ccache gcc -c" id="cdt.managedbuild.tool.gnu.c.compiler.base.376945197" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.base">
+							<tool command="gcc -c" id="cdt.managedbuild.tool.gnu.c.compiler.base.376945197" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.base">
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.option.optimization.level.1452570452" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
 								<option defaultValue="gnu.c.debugging.level.max" id="gnu.c.compiler.option.debugging.level.1433752206" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.dialect.std.539705303" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.c11" valueType="enumerated"/>
@@ -64,7 +64,7 @@
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
 								</inputType>
 							</tool>
-							<tool command="ccache as" id="cdt.managedbuild.tool.gnu.assembler.base.1686914921" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.base">
+							<tool command="as" id="cdt.managedbuild.tool.gnu.assembler.base.1686914921" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.base">
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1702302417" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
 						</toolChain>
