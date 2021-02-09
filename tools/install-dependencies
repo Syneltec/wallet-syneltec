@@ -14,6 +14,8 @@ export DYLD_LIBRARY_PATH="$PREFIX/lib"
 export LD_LIBRARY_PATH="$PREFIX/lib"
 export LD_RUN_PATH="$PREFIX/lib"
 
+if false ; then
+
 # Download Google Test
 export GTEST_VERSION=1.10.0
 GTEST_DIR="$ROOT/build/local/src/gtest"
@@ -89,5 +91,12 @@ cmake -H. -Bbuild -DCMAKE_INSTALL_PREFIX=$PREFIX
 make -Cbuild -j12
 make -Cbuild install
 rm -rf build
+
+fi
+
+export PROTOBUF_VERSION=3.14.0
+PROTOBUF_JAVA="$ROOT/build/local/lib"
+cd $PROTOBUF_JAVA
+curl -fSsOL https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/$PROTOBUF_VERSION/protobuf-java-$PROTOBUF_VERSION.jar
 
 cd "$ROOT"
