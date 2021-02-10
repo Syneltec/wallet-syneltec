@@ -2,6 +2,7 @@ package wallet.core;
 
 import wallet.core.*;
 import wallet.core.jni.*;
+import wallet.core.jni.CoinTypeConfiguration;
 
 class Coin
 {
@@ -16,9 +17,14 @@ class Coin
 
 public class Coins
 {
+    CoinTypeConfiguration
     
     void scanCoins() 
     {
+        CoinTypeConfiguration.
+        CoinTypeConfiguration[] =Coins wallet.
+        
+        
         new wallet.core.jni.CoinTypeConfiguration()
         const auto coins = TW::getCoinTypes();
         for (auto c: coins) {

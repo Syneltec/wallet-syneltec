@@ -1,6 +1,7 @@
-package wallet.core;
+package wallet.core.prog;
 
 import java.math.BigInteger;
+import java.nio.charset.StandardCharsets;
 
 import com.google.protobuf.*;
 
@@ -8,11 +9,16 @@ import wallet.core.jni.proto.Bitcoin;
 import wallet.core.jni.proto.Ethereum;
 
 import wallet.core.jni.CoinType;
+import wallet.core.jni.CoinTypeConfiguration;
 import wallet.core.jni.HDWallet;
+import wallet.core.jni.HRP;
 import wallet.core.jni.BitcoinScript;
 import wallet.core.jni.BitcoinSigHashType;
+import wallet.core.jni.Blockchain;
 import wallet.core.jni.PrivateKey;
-import wallet.core.java.AnySigner;
+import wallet.core.jni.Purpose;
+import wallet.core.jni.StoredKey;
+
 
 
 public class Prog 
@@ -38,10 +44,41 @@ public class Prog
     {
         System.loadLibrary("TrustWalletCore");
 
+        
         // 'Import' a wallet
-        HDWallet myWallet = new HDWallet(seedPhrase, passphrase);
-        showLog("Mnemonic: \n${wallet.mnemonic()}");
+        HDWallet wallet = new HDWallet(seedPhrase, passphrase);
+        
+        CoinType types[] = CoinType.values();
+        for (CoinType ct : types)
+        {
+            Blockchain bc = ct.blockchain();
+            String bcname = bc.name();
+            System.out.printf("%s ", bcname);
+           
+            HRP hrp = ct.hrp();
+            hrp.
+            
+            
+            String name = ct.name();
+            String path = ct.derivationPath();
+            int hash = ct.hashCode();
+            Purpose p = ct.purpose();
+            String purp = p.name();
+            System.out.printf("%s\t%s\t%s\t%x\n", name, path, purp, hash);
+           
+        }
 
+        
+        String mnemo = wallet.mnemonic();
+        System.out.println(mnemo.toString());
+        
+        String BtcAddr = wallet.getAddressForCoin(CoinType.BITCOIN);
+        System.out.println(BtcAddr.toString());
+        
+        System.out.println("END");
+
+        
+/*
         // Ethereum example
         CoinType coinEth = CoinType.ETHEREUM;
         // Get the default address
