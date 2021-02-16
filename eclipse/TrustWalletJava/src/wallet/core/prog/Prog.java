@@ -56,7 +56,6 @@ public class Prog
             System.out.printf("%s ", bcname);
            
             HRP hrp = ct.hrp();
-            hrp.
             
             
             String name = ct.name();
