@@ -8,7 +8,7 @@
 #include "Data.h"
 #include "ParamsBuilder.h"
 
-#include <unordered_map>
+#include <list>
 
 using namespace TW;
 using namespace TW::Ontology;
@@ -33,7 +33,8 @@ Transaction Ont::balanceOf(const Address &address, uint32_t nonce) {
 
 Transaction Ont::transfer(const Signer &from, const Address &to, uint64_t amount,
                           const Signer &payer, uint64_t gasPrice, uint64_t gasLimit,
-                          uint32_t nonce) {
+                          uint32_t nonce)
+{
     std::list<boost::any> transferParam{from.getAddress().data, to.data, amount};
     std::vector<boost::any> args{transferParam};
     auto invokeCode =
