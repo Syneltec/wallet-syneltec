@@ -3,6 +3,7 @@
 	<name>TrustWalletJNI</name>
 	<comment></comment>
 	<projects>
+		<project>TrustWalletCore</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
@@ -16,9 +17,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>src/wallet</name>
+			<name>java</name>
 			<type>2</type>
-			<locationURI>copy_PARENT/jni/java/wallet</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/jni/java</locationURI>
 		</link>
 	</linkedResources>
 	<variableList>
