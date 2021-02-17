@@ -3,8 +3,6 @@
 	<name>TrustWalletCore</name>
 	<comment></comment>
 	<projects>
-		<project>TrustWalletCrypto</project>
-		<project>TrustWalletProto</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

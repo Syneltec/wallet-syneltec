@@ -3,7 +3,6 @@
 	<name>TrustWalletJava</name>
 	<comment></comment>
 	<projects>
-		<project>TrustWalletJNI</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
